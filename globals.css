@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+body, .prose p, .prose li, .prose div {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+img[alt*="logo"], 
+.logo, 
+.logo-container img,
+header a[href="/"] img {
+  height: 48px !important;
+  max-height: 48px !important;
+  width: auto !important;
+  filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.4));
+}
+
+h1, h2, h3, h4, h5, h6,
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: 'Orbitron', sans-serif !important;
+}
+
+header a[href="/"] {
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.main-content img:not([alt*="logo"]) {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+* {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+h1, .prose h1,
+main h1, article h1 {
+  font-size: 1.55rem !important;
+  line-height: normal !important;
+  margin-bottom: 1rem !important;
+}
+
+h2, .prose h2,
+main h2, article h2 {
+  font-size: 1.3rem !important;
+  margin-top: 1.8rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+h3, .prose h3,
+main h3, article h3 {
+  font-size: 1.1rem !important;
+}

@@ -1,0 +1,125 @@
+---
+title: "Auto Moderation"
+description: "Protect your server from spam, invites, and unwelcome content with Zynrax's powerful Automod."
+icon: "robot"
+---
+
+Zynrax's Auto Moderation (Automod) system is designed to keep your server clean and professional by automatically taking action against common nuisances like spam, excessive caps, and unauthorized links.
+
+## Getting Started
+
+To begin setting up Automod, use the `automod enable` command. This will open an interactive setup where you can choose which security events to activate.
+
+<CodeGroup>
+  ```bash Enable
+  ,automod enable
+  ```
+  ```bash Disable
+  ,automod disable
+  ```
+</CodeGroup>
+
+<Tip>
+  During the `enable` process, you will be prompted to create an **Automod Logging** channel. We highly recommend enabling this to keep track of all actions Zynrax takes.
+</Tip>
+
+## Security Modules
+
+Automod consists of several specialized modules that you can toggle and configure individually.
+
+<AccordionGroup>
+  <Accordion title="Anti Spam" icon="messages">
+    Detects and takes action against users who send messages too rapidly.
+    - **Threshold**: 5 messages in 10 seconds.
+    - **Default Punishment**: Mute (5 minutes).
+  </Accordion>
+
+  <Accordion title="Anti Link" icon="link">
+    Prevents users from posting external links.
+    - **Bypasses**: GIFs (Tenor/Giphy) and Music links (Spotify, YouTube, SoundCloud, Apple Music) are automatically ignored.
+    - **Self-Server Only**: All Discord links (including invites, message links, and channel links) are blocked unless they belong to your own server.
+    - **Default Punishment**: Mute (5 minutes).
+  </Accordion>
+
+  <Accordion title="Anti Invites" icon="discord">
+    Strictly forbids sharing Discord server invite codes.
+    - **Bypasses**: Invites to the current server are allowed.
+    - **Default Punishment**: Mute (5 minutes).
+  </Accordion>
+
+  <Accordion title="Anti Caps" icon="font">
+    Controls excessive use of capital letters in messages.
+    - **Trigger**: Messages with more than 70% caps.
+    - **Bypasses**: Messages under 45 characters are ignored to allow for short emphasized words.
+    - **Default Punishment**: Mute (1 minute).
+  </Accordion>
+
+  <Accordion title="Anti Emoji Spam" icon="face-smile">
+    Prevents the flooding of channels with excessive emojis.
+    - **Trigger**: More than 5 emojis in a single message.
+    - **Default Punishment**: Mute (1 minute).
+  </Accordion>
+
+  <Accordion title="Anti Mass Mention" icon="at">
+    Stops users from annoying others with excessive pings.
+    - **Trigger**: More than 4 mentions in a single message.
+    - **Default Punishment**: Mute (3 minutes).
+  </Accordion>
+
+  <Accordion title="Anti NSFW Link" icon="biohazard">
+    Automatically filters out messages containing inappropriate or adult keywords.
+    - **Mechanism**: Monitors for a comprehensive list of filtered keywords.
+    - **Punishment**: Block Message (Unchangeable).
+  </Accordion>
+</AccordionGroup>
+
+## Configuration Commands
+
+Once enabled, you can fine-tune Automod's behavior using the following commands.
+
+### Punishments
+
+You can customize the punishment for each event (except Anti NSFW). Available actions are **Mute**, **Kick**, and **Ban**.
+
+<CodeGroup>
+  ```bash Syntax
+  ,automod punishment
+  ```
+</CodeGroup>
+
+<Info>
+  The `punishment` command is interactive. You can select multiple events and apply a single punishment type to all of them at once.
+</Info>
+
+### Whitelisting (Ignores)
+
+You can exempt specific channels or roles from being affected by Automod.
+
+<CodeGroup>
+  ```bash Ignore Channel
+  ,automod ignore channel #channel
+  ```
+  ```bash Ignore Role
+  ,automod ignore role @role
+  ```
+  ```bash Reset Whitelist
+  ,automod ignore reset
+  ```
+</CodeGroup>
+
+<Tip>
+  Use `,automod ignore show` to view all currently whitelisted channels and roles.
+</Tip>
+
+### Logging
+
+Stay informed about Automod actions by setting a dedicated logging channel.
+
+<CodeGroup>
+  ```bash Set Logging
+  ,automod logging #channel
+  ```
+  ```bash View Config
+  ,automod config
+  ```
+</CodeGroup>

@@ -1,0 +1,121 @@
+---
+title: "Mainrole"
+description: "Protect your important & family roles from unauthorized mentions with an instant-ban security system."
+icon: "crown"
+---
+
+The **Mainrole** system is a high-security defense layer designed to protect your most important roles (like `@Admin`, `@Moderator`, or your server's **Family** roles) from being mentioned by unauthorized users. 
+
+Unlike the threshold-based Anti-Nuke system, Mainrole takes **instant action** — the moment a non-authorized user mentions a protected role, they are immediately banned from the server.
+
+## Features
+
+- **Instant Protection**: No thresholds or limits. One mention of a family or admin role equals an instant ban.
+- **Multiple Protections**: Protect up to **5** different roles at once.
+- **Owner-Only Config**: Only the Server Owner or designated Extra Owners can manage these settings.
+
+## Getting Started
+
+To begin protecting your roles, you can use the `mainrole add` command.
+
+<CodeGroup>
+  ```bash Syntax
+  ,mainrole add (role)
+  ```
+  ```bash Example
+  ,mainrole add @Family
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/mainrole.PNG" />
+</Frame>
+
+### Removing Roles
+
+If you no longer wish to protect a specific role, you can remove it from the configuration.
+
+<CodeGroup>
+  ```bash Syntax
+  ,mainrole remove (role)
+  ```
+  ```bash Example
+  ,mainrole remove @Family
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/mainroleremove.PNG" />
+</Frame>
+
+<Info>
+  Once a role is added to the Mainrole configuration, Zynrax will actively monitor every message for mentions of that role.
+</Info>
+
+## Configuration Commands
+
+Manage your protected role list with these simple commands.
+
+### Viewing Protected Roles
+
+See exactly which roles are currently under Zynrax's instant-ban protection.
+
+<CodeGroup>
+  ```bash Syntax
+  ,mainrole list
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/mainrolelist.PNG" />
+</Frame>
+
+### Disabling the Module
+
+If you need to disable role protection entirely, you can reset the configuration.
+
+<CodeGroup>
+  ```bash Syntax
+  ,mainrole reset
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/mainrolereset.PNG" />
+</Frame>
+
+<Warning>
+  After a `reset`, none of your roles will be protected. Any user will be able to mention them without being banned by Zynrax.
+</Warning>
+
+## Whitelisting Users
+
+If you want a specific user to be able to mention protected roles without being banned, you must add them to the security whitelist.
+
+<CodeGroup>
+  ```bash Syntax
+  ,whitelist (user)
+  ```
+  ```bash Example
+  ,whitelist @Montage
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/mainrolewl.PNG" />
+</Frame>
+
+<Warning>
+  Whitelisting a user gives them total immunity from the Mainrole system. Only whitelist users you trust completely.
+</Warning>
+
+## Authorized Users
+
+To prevent accidental bans of your own team, the following users are automatically exempt from Mainrole protection:
+- **Server Owner**: Always allowed to mention any role.
+- **Extra Owners**: Users who have been added to the `extraowner` list and have Administrator permissions.
+- **Whitelisted Users**: Users who are on the general security whitelist.
+
+<Tip>
+  Ensure your moderators are added to the **whitelist** if you want them to be able to mention protected roles during audits or announcements.
+</Tip>

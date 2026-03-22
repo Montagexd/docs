@@ -1,0 +1,279 @@
+---
+title: 'Antinuke'
+description: "Protect your server from nuking attacks."
+icon: 'fingerprint'
+---
+
+## Why Use an AntiNuke System ?
+
+Having a rock-solid AntiNuke system in place is absolutely essential for any serious Discord server. Moderators with elevated permissions can pose a hidden threat — and without proper protection, a single bad actor can bring your entire server crashing down in seconds. Zynrax's AntiNuke system acts as the last line of defense, keeping your server safe from permission abuse, destructive actions, and internal betrayal — so your community stays intact no matter what.
+
+## How Does Zynrax's AntiNuke Work ?
+
+Zynrax's AntiNuke system works by enforcing strict action limits on every moderator within a set time frame. The moment anyone — trusted or not — exceeds those limits, Zynrax detects it instantly and jumps into action, swiftly punishing the offender before any real damage can be done. Fast, intelligent, and completely unbypassable — Zynrax makes sure no one ever gets the chance to abuse their power.
+
+
+## Configuring the antinuke
+
+<Warning>
+  Discord recently introduced a mass ban feature capable of banning 200+ members in one go. It is highly recommended to create a blank role with zero permissions, place it below Zynrax's created recovery role, and assign it to everyone on the server. Keep all admin and elevated permission roles below this role — creating a protective wall that prevents any moderator from abusing this devastating feature.
+</Warning>
+
+## Allowing users to configure the antinuke
+
+Initially, only the **Server Owner** can configure the antinuke. However, you can allow other users to configure the antinuke with the `extraowner set` command.
+
+<Warning>
+  This is a dangerous command and will allow the user to entirely alter the antinuke configuration.
+</Warning>
+
+<CodeGroup>
+  ```bash Syntax
+  ,extraowner set (user)
+  ```
+  ```bash Example
+  ,extraowner set @Montage
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/extraowner.PNG" />
+</Frame>
+
+## Exempting users from the antinuke
+
+You can exempt users from the antinuke with the `whitelist` command.
+
+<Warning>
+  This is a dangerous command and will allow the user to bypass the antinuke entirely.
+</Warning>
+
+<CodeGroup>
+  ```bash Syntax
+  ,whitelist (user)
+  ```
+  ```bash Example
+  ,whitelist @Montage
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/whitelist.png" />
+</Frame>
+
+## Enabling an Anti-Nuke Module
+
+### Available Flags
+
+The following flags can be used to define the Anti-Nuke module.
+
+<AccordionGroup>
+  <Accordion title="Threshold">
+    Set a strict daily limit on the number of actions a moderator can perform. Once that limit is hit within the day, Zynrax instantly steps in and takes action — no second chances.
+
+    <Note type="info">
+      It's recommended to keep the threshold between `5` and `10` to stay safe.
+    </Note>
+
+    <CodeGroup>
+      ```bash Syntax
+      ,antilimit (event) (limit)
+      ```
+      ```bash Example 1
+      ,antilimit ban 5
+      ```
+      ```bash Example 2
+      ,antilimit chdl 3
+      ```
+    </CodeGroup>
+
+    ### Shortcut Variables
+
+    Use these shorthands in the `(event)` field for faster configuration.
+
+    | Shortcut | Event | Shortcut | Event |
+    | :--- | :--- | :--- | :--- |
+    | `ban` | Anti Ban | `unban` | Anti Unban |
+    | `kick` | Anti Kick | `prune` | Anti Prune |
+    | `botadd` | Anti Bot Add | `chcr` | Anti Channel Create |
+    | `chdl` | Anti Channel Delete | `chup` | Anti Channel Update |
+    | `rlcr` | Anti Role Create | `rldl` | Anti Role Delete |
+    | `rlup` | Anti Role Update | `memup` | Anti Member Update |
+    | `serverup` | Anti Server Update | `meneve` | Anti Everyone/Here |
+    | `emocr` | Anti Emoji/Sticker Create | `emodl` | Anti Emoji/Sticker Delete |
+    | `emoup` | Anti Emoji/Sticker Update | `rlping` | Anti Role Ping |
+    | `integration`| Anti Integration | `webcr` | Anti Webhook Create |
+    | `webdl` | Anti Webhook Delete | `webup` | Anti Webhook Update |
+
+    <Frame>
+      <img className="rounded-xl" src="/images/antilimit.png" />
+    </Frame>
+  </Accordion>
+
+
+  <Accordion title="Punishment">
+    Define the consequence for anyone who exceeds the threshold — from stripping roles to an instant ban. Zynrax handles it swiftly and decisively.
+
+    <CodeGroup>
+      ```bash Syntax
+      ,antipunish (event) (punishment)
+      ```
+      ```bash Example 1
+      ,antipunish prune ban
+      ```
+      ```bash Example 2
+      ,antipunish chdl kick
+      ```
+    </CodeGroup>
+
+    ### Punishment Types
+
+    Specify how you'd like Zynrax to handle violators.
+
+    | Type | Description |
+    | :--- | :--- |
+    | `ban` | Permanently prevents the violator from re-entering the server. |
+    | `kick` | Instantly removes the violator from the server. |
+
+    <Frame>
+      <img className="rounded-xl" src="/images/antipunish.PNG" />
+    </Frame>
+  </Accordion>
+
+
+  <Accordion title="Command Detection">
+    Zynrax's intelligent command detection ensures total security. Before any command is executed, our system performs a comprehensive check on the user's **role hierarchy** and **required permissions**, neutralizing any unauthorized activity before it can even begin.
+  </Accordion>
+</AccordionGroup>
+
+<br />
+
+## Available Modules
+
+<AccordionGroup>
+  <Accordion title="Anti Vanity URL" icon="globe">
+    Monitors and punishes unauthorized changes to your server's custom vanity URL.
+  </Accordion>
+
+  <Accordion title="Anti Bot-Add" icon="robot">
+    Prevents unauthorized or malicious bots from being invited to your server.
+  </Accordion>
+
+  <Accordion title="Anti Ban & Unban" icon="user-shield">
+    Monitors all ban and unban actions to ensure no one is masspurging your community or releasing known bad actors.
+    - **Anti Ban**: Detects and blocks unauthorized or excessive banning.
+    - **Anti Unban**: Stops unauthorized unbanning of restricted accounts.
+  </Accordion>
+
+  <Accordion title="Anti Kick & Prune" icon="user-minus">
+    Protects your server population from unauthorized mass-removals.
+    - **Anti Kick**: Blocks unauthorized or mass-kicking of members.
+    - **Anti Prune**: Stops unauthorized member pruning attempts.
+  </Accordion>
+
+  <Accordion title="Channel Protection" icon="hashtag">
+    Shields your server structure by preventing unauthorized channel wipes or layout changes.
+    - **Anti Channel Create**: Prevents unauthorized new channels.
+    - **Anti Channel Delete**: Blocks unauthorized channel deletions.
+    - **Anti Channel Update**: Stops unauthorized changes to names, perms, or topics.
+  </Accordion>
+
+  <Accordion title="Role Protection" icon="shield-halved">
+    Protects your role hierarchy and critical server permissions from tampering.
+    - **Anti Role Create**: Stops unauthorized creation of new roles.
+    - **Anti Role Delete**: Prevents critical role deletions.
+    - **Anti Role Update**: Blocks unauthorized changes to role permissions or colors.
+  </Accordion>
+
+  <Accordion title="Member & Server Update" icon="gears">
+    Protects both individual member profiles and core server settings.
+    - **Anti Member Update**: Monitors and stops unauthorized nickname or role changes.
+    - **Anti Server Update**: Prevents unauthorized changes to server names, icons, and regions.
+  </Accordion>
+
+  <Accordion title="Emoji & Sticker Protection" icon="face-smile">
+    Protects your server's visual identity and expression tools.
+    - **Anti Emoji Create/Delete/Update**: Full protection for custom server emojis.
+    - **Anti Sticker Protection**: Shields custom stickers from unauthorized removal.
+  </Accordion>
+
+  <Accordion title="Webhook Protection" icon="code-branch">
+    Blocks rogue webhooks that could be used for spamming or data leaks.
+    - **Anti Webhook Create**: Blocks unauthorized new webhooks.
+    - **Anti Webhook Delete**: Prevents authorized webhooks from being deleted.
+    - **Anti Webhook Update**: Blocks changes to existing webhook configurations.
+  </Accordion>
+
+  <Accordion title="Mass-Ping Protection" icon="bell-slash">
+    Detects and blocks unauthorized @everyone or @here pings to prevent server disruption.
+  </Accordion>
+
+  <Accordion title="Integration & Invite Protection" icon="link">
+    Monitors apps and external links to ensure no backdoors are created.
+    - **Anti Integration**: Stops unauthorized app integrations.
+    - **Anti Invite-Role**: Prevents role assignment via invite link metadata.
+    - **Anti Link-Role**: Blocks malicious linking of external roles.
+  </Accordion>
+</AccordionGroup>
+
+## Disabling an antinuke module
+
+You can disable an antinuke module with the same command you used to enable it, but with the status set to `disable`.
+
+<Frame>
+  <img className="rounded-xl" src="/images/antinuke.PNG" />
+</Frame>
+
+
+
+## Viewing the antinuke configuration
+
+You can use the `,anticonfig` command to view the current antinuke configuration.
+
+<CodeGroup>
+  ```bash Syntax
+  ,anticonfig
+  ```
+  ```bash Example
+  ,anticonfig
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/anticonfig.PNG" />
+</Frame>
+
+
+## Viewing the Whitelist Users
+
+You can use the `whitelisted` command to view the whitelisted users.
+
+<CodeGroup>
+  ```bash Syntax
+  ,whitelisted
+  ```
+  ```bash Example
+  ,whitelisted
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/whitelisted.PNG" />
+</Frame>
+
+## Unwhitelisting users from the antinuke
+
+You can remove users from the antinuke whitelist with the `unwhitelist` command.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unwhitelist (user)
+  ```
+  ```bash Example
+  ,unwhitelist @Montage
+  ```
+</CodeGroup>
+
+<Frame>
+  <img className="rounded-xl" src="/images/unwhitelist.PNG" />
+</Frame>
