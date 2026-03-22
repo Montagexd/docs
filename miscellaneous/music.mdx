@@ -1,0 +1,240 @@
+---
+title: "Music"
+description: "High-quality music streaming with advanced playback controls and multi-platform support."
+icon: "music"
+---
+
+Experience crystal-clear audio with Zynrax's music system. Supporting YouTube, Spotify, Soundcloud, Apple Music, and more, Zynrax is the ultimate companion for your voice channels.
+
+<Note>
+  Zynrax uses a high-performance Lavalink node to ensure minimal latency and superior sound quality.
+</Note>
+
+## Getting Started
+
+Commands to get the bot into your voice channel and start the music.
+
+### <Icon icon="door-open" /> Join Voice Channel
+
+Summon the bot to your current voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,join
+  ```
+</CodeGroup>
+
+### <Icon icon="play" /> Play Music
+
+Play a song or playlist by name, keyword, or URL.
+
+<CodeGroup>
+  ```bash Syntax
+  ,play (query)
+  ```
+</CodeGroup>
+<Tip>
+  You can provide a link from Spotify, YouTube, SoundCloud, and more!
+</Tip>
+
+### <Icon icon="magnifying-glass" /> Search Music
+
+Search for a specific track across multiple platforms and choose from the results.
+
+<CodeGroup>
+  ```bash Syntax
+  ,search (query)
+  ```
+</CodeGroup>
+
+### <Icon icon="door-closed" /> Disconnect Bot
+
+Remove the bot from the voice channel and clear the current session.
+
+<CodeGroup>
+  ```bash Syntax
+  ,disconnect
+  ```
+</CodeGroup>
+
+<br />
+
+## Playback Controls
+
+Manage the currently playing track and its behavior.
+
+### <Icon icon="headphones" /> Now Playing
+
+View detailed information about the song that is currently playing.
+
+<CodeGroup>
+  ```bash Syntax
+  ,nowplaying
+  ```
+</CodeGroup>
+
+### <Icon icon="pause" /> Pause Track
+
+Halt the current playback temporarily.
+
+<CodeGroup>
+  ```bash Syntax
+  ,pause
+  ```
+</CodeGroup>
+
+### <Icon icon="forward-step" /> Resume Track
+
+Continue playing a song that was previously paused.
+
+<CodeGroup>
+  ```bash Syntax
+  ,resume
+  ```
+</CodeGroup>
+
+### <Icon icon="stop" /> Stop Playback
+
+Stop the music and clear the music queue entirely.
+
+<CodeGroup>
+  ```bash Syntax
+  ,stop
+  ```
+</CodeGroup>
+
+### <Icon icon="arrow-rotate-left" /> Replay Song
+
+Start the currently playing track from the very beginning.
+
+<CodeGroup>
+  ```bash Syntax
+  ,replay
+  ```
+</CodeGroup>
+
+### <Icon icon="arrow-right-to-bracket" /> Seek Position
+
+Jump to a specific point in the song using a percentage.
+
+<CodeGroup>
+  ```bash Syntax
+  ,seek (percentage)
+  ```
+</CodeGroup>
+
+### <Icon icon="volume-high" /> Change Volume
+
+Adjust the player volume to your preference (1-150%).
+
+<CodeGroup>
+  ```bash Syntax
+  ,volume (level)
+  ```
+</CodeGroup>
+
+<br />
+
+## Queue Management
+
+Organize your upcoming tracks and session flow.
+
+### <Icon icon="list-music" /> View Queue
+
+Display a list of all upcoming songs in the current session.
+
+<CodeGroup>
+  ```bash Syntax
+  ,queue
+  ```
+</CodeGroup>
+
+### <Icon icon="forward" /> Skip Song
+
+Skip the current song and move to the next one in the queue.
+
+<CodeGroup>
+  ```bash Syntax
+  ,skip
+  ```
+</CodeGroup>
+
+### <Icon icon="shuffle" /> Shuffle Queue
+
+Randomize the order of all songs currently in the queue.
+
+<CodeGroup>
+  ```bash Syntax
+  ,shuffle
+  ```
+</CodeGroup>
+
+### <Icon icon="trash-can" /> Clear Queue
+
+Empty all upcoming tracks from the queue at once.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clearqueue
+  ```
+</CodeGroup>
+
+<br />
+
+## Advanced Features
+
+Automation and loop settings for a better listening experience.
+
+### <Icon icon="wand-magic-sparkles" /> Autoplay Mode
+
+Toggle autoplay to have the bot automatically play similar songs when the queue ends.
+
+<CodeGroup>
+  ```bash Syntax
+  ,autoplay
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate" /> Loop Track
+
+Toggle loop mode to repeat the current track indefinitely.
+
+<CodeGroup>
+  ```bash Syntax
+  ,loop
+  ```
+</CodeGroup>
+
+<br />
+
+## Supported Platforms
+
+Zynrax is powered by a high-end music engine that supports a massive range of audio and video sources.
+
+<CardGroup cols={3}>
+  <Card title="Spotify" icon="spotify" color="#1DB954" />
+  <Card title="Apple Music" icon="apple" color="#FC3C44" />
+  <Card title="YouTube" icon="youtube" color="#FF0000" />
+  <Card title="YouTube Music" icon="youtube" color="#FF0000" />
+  <Card title="Deezer" icon="deezer" color="#EF5466" />
+  <Card title="SoundCloud" icon="soundcloud" color="#FF3300" />
+  <Card title="Amazon Music" icon="amazon" color="#00A8E1" />
+  <Card title="Instagram" icon="instagram" color="#E4405F" />
+  <Card title="TikTok" icon="tiktok" color="#EE1D52" />
+  <Card title="Twitch" icon="twitch" color="#9146FF" />
+  <Card title="Vimeo" icon="vimeo-v" color="#1AB7EA" />
+  <Card title="Reddit" icon="reddit-alien" color="#FF4500" />
+  <Card title="Yandex Music" icon="yandex-international" color="#FF0000" />
+  <Card title="Bandcamp" icon="bandcamp" color="#629AA9" />
+  <Card title="Mixcloud" icon="mixcloud" color="#52AAD8" />
+  <Card title="Pandora" icon="pandora" color="#00A0EE" />
+  <Card title="Tidal" icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1.41l-5.64 5.64 5.64 5.64 5.64-5.64L12 1.41zm-6.35 6.35L0 13.41l5.65 5.65 5.65-5.65-5.65-5.65zm12.7 0l-5.65 5.65 5.65 5.65 5.65-5.65-5.65-5.65zM12 14.12l-5.65 5.65 5.65 5.65L17.65 19.77 12 14.12z" fill="currentColor"/></svg>} color="#FFFFFF" />
+  <Card title="Qobuz" icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 5C25.1 5 5 25.1 5 50s20.1 45 45 45 45-20.1 45-45S74.9 5 50 5zm0 82C29.6 87 13 70.4 13 50S29.6 13 50 13s37 16.6 37 37-16.6 37-37 37zm18.3-48.4c-1.3-1.3-3-2-4.8-2s-3.5.7-4.8 2l-8.7 8.7c-2.7 2.7-2.7 7 0 9.7 1.3 1.3 3 2 4.8 2s3.5-.7 4.8-2l8.7-8.7c2.7-2.7 2.7-7.1 0-9.7z" fill="currentColor"/></svg>} color="#003366" />
+  <Card title="Gaana" icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6.5c0 1.38-1.12 2.5-2.5 2.5S8.5 14.88 8.5 13.5s1.12-2.5 2.5-2.5c.34 0 .67.07.97.21V7z" fill="currentColor"/></svg>} color="#E72C33" />
+  <Card title="JioSaavn" icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" fill="currentColor"/></svg>} color="#00D0B0" />
+  <Card title="Clypit" icon="lines-leaning" color="#3A66B0" />
+  <Card title="Soundgasm" icon="ear-listen" color="#F29F05" />
+  <Card title="OCRemix" icon="gamepad" color="#E67E22" />
+  <Card title="GetYarn" icon="film" color="#27AE60" />
+</CardGroup>
+

@@ -1,0 +1,43 @@
+---
+title: "Guild Tag"
+description: "Automatically grant roles to members who rep your server's tag in their profile."
+icon: "tags"
+---
+
+The Guild Tag module lets you automatically reward members who represent your server by using your `Server's clan tag` in their Discord profile. When a member's clan badge matches your server's tag, they are instantly granted a special role and a congratulatory message is sent in a designated channel.
+
+
+
+## Setup Tag Reward
+
+Configure the role to award and the channel for congratulatory messages.
+
+<CodeGroup>
+  ```bash Command
+  ,guildtag setup <@role> <#channel>
+  ```
+  ```bash Example
+  ,guildtag setup @Zynrax Lifer #tag-logs
+  ```
+</CodeGroup>
+
+## View Configuration
+
+Check the current tag and role being used.
+
+<CodeGroup>
+  ```bash Command
+  ,guildtag show
+  ```
+</CodeGroup>
+
+## Reset Settings
+
+Clear the guild tag configuration for your server.
+
+<CodeGroup>
+  ```bash Command
+  ,guildtag reset
+  ```
+</CodeGroup>
+

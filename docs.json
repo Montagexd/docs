@@ -26,14 +26,54 @@
           "overview/setup"
         ]
       },
-
       {
         "group": "Security Setup",
         "pages": [
           "security/antinuke",
           "security/automod",
           "security/moderation",
+          "security/jail",
           "security/mainrole"
+        ]
+      },
+      {
+        "group": "Server Configuration",
+        "pages": [
+          {
+            "group": "Roles",
+            "icon": "users-gear",
+            "pages": [
+              "configuration/roles/autorole",
+              "configuration/roles/reaction",
+              "configuration/roles/vanity",
+              "configuration/roles/custom",
+              "configuration/roles/guildtag",
+              "configuration/roles/vcrole"
+            ]
+          },
+          {
+            "group": "Messages",
+            "icon": "message",
+            "pages": [
+              "configuration/autoresponder",
+              "configuration/autoreact"
+            ]
+          },
+          "configuration/welcome",
+          "configuration/logging",
+          "configuration/joindm",
+          "configuration/tickets",
+          "configuration/media",
+          "configuration/ignore",
+          "configuration/voicemaster",
+          "configuration/leaderboard"
+        ]
+      },
+      {
+        "group": "Miscellaneous",
+        "pages": [
+          "miscellaneous/music",
+          "miscellaneous/giveaway"
         ]
       },
       {
@@ -80,4 +120,3 @@
     }
   }
 }
-

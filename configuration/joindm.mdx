@@ -1,0 +1,79 @@
+---
+title: "Join DM"
+description: "Send a personal direct message to members as soon as they join."
+icon: "envelope-open-text"
+---
+
+With **Join DM**, you can personally welcome new members directly in their DMs, providing them with essential links or information that they might miss in a busy channel.
+
+## Configuration Commands
+
+Manage your server's direct messaging system for newcomers.
+
+### <Icon icon="toggle-on" /> Enable Join DM
+
+Turn on the join DM module for your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,joindm enable
+  ```
+  ```bash Example
+  ,joindm enable
+  ```
+</CodeGroup>
+
+### <Icon icon="toggle-off" /> Disable Join DM
+
+Turn off the join DM module for your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,joindm disable
+  ```
+  ```bash Example
+  ,joindm disable
+  ```
+</CodeGroup>
+
+### <Icon icon="pencil" /> Custom Message
+
+Set the message you want Zynrax to send to new members.
+
+<CodeGroup>
+  ```bash Syntax
+  ,joindm message (content)
+  ```
+  ```bash Example
+  ,joindm message Welcome to our server {user}! Be sure to read the rules.
+  ```
+</CodeGroup>
+<Note>
+  Use `{user}` to mention the member in the DM.
+</Note>
+
+### <Icon icon="paper-plane" /> System Testing
+
+Send the configured join DM to **yourself** to ensure it looks right.
+
+<CodeGroup>
+  ```bash Syntax
+  ,joindm test
+  ```
+  ```bash Example
+  ,joindm test
+  ```
+</CodeGroup>
+
+### <Icon icon="gear" /> View Configuration
+
+Check your current join DM message and its status.
+
+<CodeGroup>
+  ```bash Syntax
+  ,joindm config
+  ```
+  ```bash Example
+  ,joindm config
+  ```
+</CodeGroup>

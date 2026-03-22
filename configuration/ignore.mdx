@@ -1,0 +1,136 @@
+---
+title: "Ignore"
+description: "Control where and who can use Zynrax commands within your server."
+icon: "eye-slash"
+---
+
+The **Ignore** module gives administrators granular control over command execution. You can restrict specific commands, silence the bot in certain channels, or prevent specific users from interacting with Zynrax entirely.
+
+<Note>
+  Users in the **Bypass List** will ignore all restrictions and can use Zynrax anywhere, regardless of channel or user ignore settings.
+</Note>
+
+## Command Restrictions
+
+Prevent specific Zynrax commands from being used in your server.
+
+### <Icon icon="terminal" /> Ignore Command
+
+Disable a specific command server-wide.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore command add (command_name)
+  ```
+  ```bash Example
+  ,ignore command add play
+  ```
+</CodeGroup>
+
+### <Icon icon="check" /> Unignore Command
+
+Re-enable a previously ignored command.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore command remove (command_name)
+  ```
+</CodeGroup>
+
+### <Icon icon="list" /> View Ignored Commands
+
+Display all commands currently restricted in the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore command show
+  ```
+</CodeGroup>
+
+<br />
+
+## Channel Restrictions
+
+Restrict Zynrax from responding in specific text channels.
+
+### <Icon icon="comment-slash" /> Ignore Channel
+
+Make Zynrax ignore all commands sent in a specific channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore channel add (channel)
+  ```
+</CodeGroup>
+
+### <Icon icon="comment" /> Unignore Channel
+
+Allow Zynrax to respond in a previously ignored channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore channel remove (channel)
+  ```
+</CodeGroup>
+
+<br />
+
+## User Restrictions
+
+Prevent specific members from using any Zynrax commands.
+
+### <Icon icon="user-slash" /> Ignore User
+
+Block a specific user from interacting with the bot.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore user add (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="user-check" /> Unignore User
+
+Unblock a user so they can use Zynrax commands again.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore user remove (member)
+  ```
+</CodeGroup>
+
+<br />
+
+## Bypass Settings
+
+Trusted users who can ignore all the restrictions mentioned above.
+
+### <Icon icon="shield-check" /> Add Bypass
+
+Allow a user to bypass all ignore restrictions.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore bypass add (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="shield-xmark" /> Remove Bypass
+
+Remove a user from the bypass list.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore bypass remove (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="users-gear" /> Show Bypass List
+
+View all members who currently have bypass permissions.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ignore bypass show
+  ```
+</CodeGroup>

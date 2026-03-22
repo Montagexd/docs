@@ -1,0 +1,58 @@
+---
+title: "Auto Responder"
+description: "Configure Zynrax to automatically respond to specific trigger words."
+icon: "reply-all"
+---
+
+The **Auto Responder** module allows you to automate common responses. When a member sends a message that matches a configured trigger, Zynrax will instantly reply with your predefined message. This is great for FAQs, social links, or fun commands.
+
+## Managing Responders
+
+Create and maintain your server's automated responses.
+
+### <Icon icon="plus" /> Create Responder
+
+Add a new trigger and response pair.
+
+<CodeGroup>
+  ```bash Syntax
+  ,autoresponder create (trigger) (response)
+  ```
+  ```bash Example
+  ,autoresponder create site Visit our website at https://zynraxbotz.site
+  ```
+</CodeGroup>
+
+### <Icon icon="pen-to-square" /> Edit Responder
+
+Update the response for an existing trigger.
+
+<CodeGroup>
+  ```bash Syntax
+  ,autoresponder edit (trigger) (new_response)
+  ```
+</CodeGroup>
+
+### <Icon icon="trash" /> Delete Responder
+
+Remove an autoresponder from your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,autoresponder delete (trigger)
+  ```
+</CodeGroup>
+
+### <Icon icon="list" /> View All Responders
+
+See everything currently configured in your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,autoresponder config
+  ```
+</CodeGroup>
+
+<Info>
+  **Pro-Tip**: Use autoresponders to give members quick access to support articles or server rules without having to ping staff!
+</Info>

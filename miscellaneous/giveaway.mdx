@@ -1,0 +1,106 @@
+---
+title: "Giveaways"
+description: "Host engagement-boosting giveaways with ease."
+icon: "gift"
+---
+
+Host giveaways to reward your members and boost engagement! Zynrax's **Giveaway System** is robust, reliable, and supports custom branding with your own images.
+
+## Hosting a Giveaway
+
+Quickly launch a giveaway in any channel.
+
+### <Icon icon="play" /> Start Giveaway
+
+Launch a giveaway with a specified duration, number of winners, and prize.
+
+<CodeGroup>
+  ```bash Syntax
+  ,gstart (time) (winners) (prize)
+  ```
+  ```bash Example
+  ,gstart 24h 3 Nitro Basic
+  ```
+</CodeGroup>
+<Note>
+  Time format: `s` (seconds), `m` (minutes), `h` (hours), `d` (days).
+</Note>
+
+### <Icon icon="stop" /> End Early
+
+Instantly end a currently running giveaway and pick winners.
+
+<CodeGroup>
+  ```bash Syntax
+  ,gend [message_id]
+  ```
+</CodeGroup>
+<Tip>
+  You can also simply **reply** to a giveaway message with `,gend` to end it!
+</Tip>
+
+### <Icon icon="rotate" /> Reroll Winners
+
+Pick a new winner for an already ended giveaway.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greroll
+  ```
+</CodeGroup>
+<Note>
+  You **must reply** to the ended giveaway message with `,greroll` to pick a new winner.
+</Note>
+
+<br />
+
+## Configuration & Branding
+
+Make your giveaways stand out with custom settings.
+
+### <Icon icon="image" /> Custom Embed Image
+
+Set a custom banner image that will appear at the bottom of all giveaway messages.
+
+<CodeGroup>
+  ```bash Set Image
+  ,gembed set (url/upload)
+  ```
+  ```bash Reset
+  ,gembed reset
+  ```
+</CodeGroup>
+
+### <Icon icon="user-gear" /> Giveaway Staff
+
+Allow specific roles to manage giveaways without needing administrator permissions.
+
+<CodeGroup>
+  ```bash Set Role
+  ,gstaff role @GiveawayManager
+  ```
+  ```bash Reset
+  ,gstaff reset
+  ```
+</CodeGroup>
+
+### <Icon icon="gear" /> View Configuration
+
+Check your server's giveaway settings.
+
+<CodeGroup>
+  ```bash View All
+  ,gconfig
+  ```
+</CodeGroup>
+
+
+### <Icon icon="list" /> List Giveaways
+
+View all active giveaways in your server.
+
+<CodeGroup>
+  ```bash List active
+  ,glist
+  ```
+</CodeGroup>

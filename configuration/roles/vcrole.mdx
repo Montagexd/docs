@@ -1,0 +1,38 @@
+---
+title: "Voice Role"
+description: "Automatically grant roles to members when they join any voice channel in your server."
+icon: "microphone"
+---
+
+The Voice Role module automatically grants a designated role to any member who joins a Voice channel in your server, and removes it the moment they disconnect. This is perfect for giving voice-active members special permissions like access to a voice-only text chat, a unique color in the member list, or simply highlighting who is currently in a vc.
+
+## Configure the role that will be automatically added.
+
+<CodeGroup>
+  ```bash Command
+  ,vcrole add <@role>
+  ```
+  ```bash Example
+  ,vcrole add @Voice Active
+  ```
+</CodeGroup>
+
+## Remove Voice Role
+
+Clear the Voice role setting for your server.
+
+<CodeGroup>
+  ```bash Command
+  ,vcrole remove
+  ```
+</CodeGroup>
+
+## View Config
+
+Check your current Voice Role configuration.
+
+<CodeGroup>
+  ```bash Command
+  ,vcrole show
+  ```
+</CodeGroup>

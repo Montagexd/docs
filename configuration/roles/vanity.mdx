@@ -1,0 +1,41 @@
+---
+title: "Vanity Roles"
+description: "Automatically award roles to users for repping your server vanity in their status."
+icon: "user-crown"
+---
+
+The Vanity Roles module rewards your most loyal members who show support for your server by adding your Server Vanity or any custom text to their Discord custom status. When a user's status contains the specified vanity text (e.g., `.gg/zynrax`), they are automatically granted a special role as a thank-you reward.
+
+
+## Setup Vanity Role
+
+Configure the vanity text, the role to award, and a log channel.
+
+<CodeGroup>
+  ```bash Command
+  ,vanityroles setup <vanity_text> <@role> <#channel>
+  ```
+  ```bash Example
+  ,vanityroles setup .gg/zynrax @Vanity Supporter #vanity-logs
+  ```
+</CodeGroup>
+
+## Reset Configuration
+
+Clear the vanity role settings for your server.
+
+<CodeGroup>
+  ```bash Command
+  ,vanityroles reset
+  ```
+</CodeGroup>
+
+## View Configuration
+
+Check your current vanity role settings.
+
+<CodeGroup>
+  ```bash Command
+  ,vanityroles show
+  ```
+</CodeGroup>

@@ -1,0 +1,102 @@
+---
+title: "Logging"
+description: "Keep a detailed audit trail of every action in your server."
+icon: "clipboard-list"
+---
+
+Zynrax's **Logging** system is one of the most advanced in the Discord community, capable of tracking over 70 different server events across multiple specialized categories. Whether it's a deleted message, a modified role, or a member join, Zynrax ensures you never miss a thing.
+
+## Setup Walkthrough
+
+To make configuration easy, Zynrax uses an interactive setup process.
+
+### <Icon icon="stairs" /> Interactive Setup
+
+Start the setup process and follow the on-screen buttons to configure your logs.
+
+<CodeGroup>
+  ```bash Syntax
+  ,logging setup
+  ```
+</CodeGroup>
+<Info>
+  This will open a menu where you can select specific categories (Member, Message, Voice, etc.) and assign them to channels.
+</Info>
+
+### <Icon icon="wand-magic-sparkles" /> Auto Config
+
+Automatically generate a complete logging category with dedicated channels for every event type.
+
+<CodeGroup>
+  ```bash Syntax
+  ,logging auto setup
+  ```
+</CodeGroup>
+<Info>
+  This creates a "Zynrax Logs" category with 7 predefined channels (member-logs, message-logs, voice-logs, etc.) and routes events automatically.
+</Info>
+
+### <Icon icon="toggle-on" /> Enable Logging
+
+Turn on the logging module for your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,logging enable
+  ```
+</CodeGroup>
+
+### <Icon icon="toggle-off" /> Disable Logging
+
+Turn off the logging module for your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,logging disable
+  ```
+</CodeGroup>
+
+<br />
+
+## Logging Categories
+
+Zynrax organizes events into logical groups to help you stay organized.
+
+| Category | Typical Events Tracked |
+| :--- | :--- |
+| **Member Actions** | Join, Leave, Nickname changes, Role updates. |
+| **Message Actions** | Deletions, Edits, Pinned messages, Bulk purges. |
+| **Voice Actions** | Joining/Leaving VC, Mutes, Streaming status. |
+| **Server Actions** | Invite creation, Emoji updates, Event changes. |
+| **Channel Actions** | Creating/Deleting channels, Permission changes. |
+| **Mod Logs** | Bans, Kicks, Timeouts (sent to a separate channel). |
+
+## Management Commands
+
+Audit and maintain your logging configuration.
+
+### <Icon icon="magnifying-glass" /> View Configuration
+
+See which events are enabled and where they are being logged.
+
+<CodeGroup>
+  ```bash Syntax
+  ,logging config
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-left" /> System Reset
+
+Wipe all logging configurations and start fresh.
+
+<CodeGroup>
+  ```bash Syntax
+  ,logging reset
+  ```
+</CodeGroup>
+
+<br />
+
+<Tip>
+  **Pro-Tip**: We recommend setting a separate channel for **Mod Logs** and **Regular Logs** to keep your staff channel clean and actionable.
+</Tip>

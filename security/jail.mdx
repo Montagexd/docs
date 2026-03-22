@@ -1,0 +1,84 @@
+---
+title: "Jail"
+description: "Isolate problematic members by stripping their roles and restricting them to a single channel."
+icon: "gavel"
+---
+
+The **Jail** system is a powerful moderation tool that allows you to "lock up" members who violate server rules. When a member is jailed, Zynrax strips all of their current roles and assigns them a special **Jail Role**, restricting them to a designated **Jail Channel** where they can only speak with moderators.
+
+
+## Configuration
+
+Before using the jail system, you must configure a jail role and a jail channel.
+
+### <Icon icon="gears" /> Interactive Setup
+
+Open an interactive menu to set up your jail role and channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,jail setup
+  ```
+</CodeGroup>
+
+### <Icon icon="list-check" /> View Config
+
+Check your current jail settings, including the configured role and channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,jail config
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-left" /> Reset Config
+
+Remove the current jail configuration and reset it to default.
+
+<CodeGroup>
+  ```bash Syntax
+  ,jail reset
+  ```
+</CodeGroup>
+
+<br />
+
+## Member Management
+
+Commands to jail and unjail server members.
+
+### <Icon icon="lock" /> Jail Member
+
+Punish a member by jailing them for a specific duration or permanently.
+
+<CodeGroup>
+  ```bash Syntax
+  ,jail (member) [duration] [reason]
+  ```
+  ```bash Example
+  ,jail @user 1h Stop spamming in general
+  ```
+</CodeGroup>
+<Tip>
+  Valid duration units: **s** (seconds), **m** (minutes), **h** (hours), **d** (days).
+</Tip>
+
+### <Icon icon="lock-open" /> Unjail Member
+
+Release a member from jail and restore their original roles.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unjail (member) [reason]
+  ```
+</CodeGroup>
+
+### <Icon icon="users" /> Jailed List
+
+View a list of all currently jailed members and their remaining time.
+
+<CodeGroup>
+  ```bash Syntax
+  ,jail list
+  ```
+</CodeGroup>

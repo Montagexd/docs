@@ -1,0 +1,54 @@
+---
+title: "Reaction Roles"
+description: "Allow your members to assign roles themselves by reacting to messages."
+icon: "wand-magic-sparkles"
+---
+
+The Reaction Roles module lets you create self-service role menus where members can assign roles to themselves simply by reacting to a message with an emoji. This eliminates the need for staff to manually assign roles and gives your community instant access to the roles they want.
+
+
+## Add a Role
+
+Add a new reaction role to an existing message.
+
+<CodeGroup>
+  ```bash Syntax
+  ,reactionrole add (message_id) (emoji) (role)
+  ```
+  ```bash Example
+  ,reactionrole add 10293847565 :wtick: @Member
+  ```
+</CodeGroup>
+
+## Remove a Role
+
+Remove a specific reaction binding from a message.
+
+<CodeGroup>
+  ```bash Syntax
+  ,reactionrole remove (message_id) (emoji)
+  ```
+  ```bash Example
+  ,reactionrole remove 10293847565 :wtick:
+  ```
+</CodeGroup>
+
+## List & Audit
+
+View all active reaction roles configured in your server.
+
+<CodeGroup>
+  ```bash View All
+  ,reactionrole list
+  ```
+</CodeGroup>
+
+## System Reset
+
+Wipe all reaction role configurations from your server.
+
+<CodeGroup>
+  ```bash Reset
+  ,reactionrole reset
+  ```
+</CodeGroup>

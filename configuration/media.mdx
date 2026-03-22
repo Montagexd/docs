@@ -1,0 +1,84 @@
+---
+title: "Media"
+description: "Restrict channels to media-only content to keep your server organized."
+icon: "images"
+---
+
+The **Media** module allows you to designate specific channels as "Media-Only". In these channels, Zynrax will automatically delete any messages that do not contain attachments (images, videos, or files), ensuring the conversation stays focused on content.
+
+<Note>
+  Ensure Zynrax has the **Manage Messages** permission in the media channel to successfully remove non-media content.
+</Note>
+
+## Channel Setup
+
+Configure where you want the media-only policy to be enforced.
+
+### <Icon icon="plus" /> Setup Media Channel
+
+Designate a text channel as media-only.
+
+<CodeGroup>
+  ```bash Syntax
+  ,media setup (channel)
+  ```
+  ```bash Example
+  ,media setup #media-only
+  ```
+</CodeGroup>
+
+### <Icon icon="trash" /> Remove Media Channel
+
+Disable the media-only restriction for the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,media remove
+  ```
+</CodeGroup>
+
+### <Icon icon="gear" /> View Configuration
+
+Check which channel is currently set as media-only.
+
+<CodeGroup>
+  ```bash Syntax
+  ,media config
+  ```
+</CodeGroup>
+
+<br />
+
+## Bypass Settings
+
+Allow specific trusted members to send regular text messages in media channels.
+
+### <Icon icon="user-plus" /> Add Bypass
+
+Grant a user permission to bypass the media-only restriction.
+
+<CodeGroup>
+  ```bash Syntax
+  ,media bypass add (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="user-minus" /> Remove Bypass
+
+Revoke a user's bypass permission.
+
+<CodeGroup>
+  ```bash Syntax
+  ,media bypass remove (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="users" /> Show Bypass List
+
+View all members who currently have bypass permissions.
+
+<CodeGroup>
+  ```bash Syntax
+  ,media bypass show
+  ```
+</CodeGroup>

@@ -1,0 +1,95 @@
+---
+title: "Custom Roles"
+description: "Allow your staff, VIPs, or authorized members to manage specific roles via custom commands."
+icon: "user-gear"
+---
+
+The Custom Roles module allows server administrators to create a controlled role-management system. You can create specialized commands that can be used by anyone who holds a `Required Role`, making it easy to delegate role management to trusted members without giving them full server permissions.
+
+
+## Setup Predefined Roles
+
+Configure the roles for Staff, Girl, VIP, Guest, or Friend slots.
+
+<CodeGroup>
+  ```bash Command
+  ,setup staff <role>
+  ,setup vip <role>
+  ,setup girl <role>
+  ,setup guest <role>
+  ,setup friend <role>
+  ```
+  ```bash Example
+  ,setup vip @VIP Access
+  ```
+</CodeGroup>
+
+## Setup Required Role
+
+This role is **required** for any member to use the toggle commands.
+
+<CodeGroup>
+  ```bash Command
+  ,setup reqrole <role>
+  ```
+</CodeGroup>
+
+## List Configuration
+
+View which roles are currently set up.
+
+<CodeGroup>
+  ```bash Command
+  ,setup config
+  ```
+</CodeGroup>
+
+## Create Custom Toggle
+
+Map a command name to a specific role.
+
+<CodeGroup>
+  ```bash Command
+  ,setup create <name> <@role>
+  ```
+  ```bash Example
+  ,setup create pingable @Ping Role
+  ```
+</CodeGroup>
+
+## Delete Custom Toggle
+
+Remove a custom role command.
+
+<CodeGroup>
+  ```bash Command
+  ,setup delete <name>
+  ```
+</CodeGroup>
+
+## List All Creations
+
+Check all active custom role commands.
+
+<CodeGroup>
+  ```bash Command
+  ,setup list
+  ```
+</CodeGroup>
+
+## How to Use
+
+Once you have configured a role and hold the `Required Role`, you can toggle it on any member.
+
+<CodeGroup>
+  ```bash Predefined Toggles
+  ,staff @Montage
+  ,vip @Montage
+  ,girl @Montage
+  ,guest @Montage
+  ,friend @Montage
+  ```
+  ```bash Custom Toggles
+  ,<custom_name> @Member
+  ```
+</CodeGroup>

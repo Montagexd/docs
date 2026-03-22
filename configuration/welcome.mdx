@@ -1,0 +1,138 @@
+---
+title: "Welcomer"
+description: "Greet new members with a custom welcome message and embed."
+icon: "hand-wave"
+---
+
+Zynrax's Welcomer system allows you to automatically greet new members who join your server. You can choose from simple text messages or more advanced, fully-customizable embeds.
+
+## Getting Started
+
+To begin using the Welcomer system, you can use our web dashboard for the best experience.
+
+<Info>
+  **Pro-Tip**: Use the [Web Dashboard](https://www.zynraxbotz.site/dashboard) for the easiest configuration of complex embeds.
+</Info>
+
+## Configuration Commands
+
+Manage the welcomer system directly from your Discord server.
+
+### <Icon icon="power-off" /> Enable Welcomer
+
+Turn on the welcomer module for your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet enable
+  ```
+  ```bash Example
+  ,greet enable
+  ```
+</CodeGroup>
+
+### <Icon icon="power-off" /> Disable Welcomer
+
+Turn off the welcomer module for your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet disable
+  ```
+  ```bash Example
+  ,greet disable
+  ```
+</CodeGroup>
+
+### <Icon icon="hashtag" /> Target Channel
+
+Set where the welcome messages should be sent.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet channel #channel
+  ```
+  ```bash Example
+  ,greet channel #welcome
+  ```
+</CodeGroup>
+
+### <Icon icon="clock" /> Auto-Delete Duration
+
+Optionally set a timer for how long the welcome message remains in the channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet autodelete (seconds)
+  ```
+  ```bash Example
+  ,greet autodelete 60
+  ```
+</CodeGroup>
+<Note>
+  Use `0` to disable auto-deletion.
+</Note>
+
+### <Icon icon="vial" /> System Testing
+
+Send a test welcome message to yourself to verify the configuration.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet test
+  ```
+  ```bash Example
+  ,greet test
+  ```
+</CodeGroup>
+
+## Customizing Content
+
+You can define placeholders to make your welcome messages unique to each user.
+
+### Basic Format
+You can set a simple message or an embed via the dashboard.
+
+### Available Placeholders
+Capture dynamic data from the joining user and server.
+
+| Placeholder | Description |
+| :--- | :--- |
+| `{user}` | Mentions the member. |
+| `{user_name}` | Displays the member's username. |
+| `{user_nick}` | Displays the member's server display name or nickname. |
+| `{user_id}` | Displays the member's ID. |
+| `{user_avatar}` | The member's avatar image URL. |
+| `{user_joindate}` | The date the member joined the server. |
+| `{user_createdate}` | The date the member's Discord account was created. |
+| `{server_name}` | Name of your Discord server. |
+| `{server_id}` | The ID of your Discord server. |
+| `{server_membercount}` | Current total member count. |
+| `{server_icon}` | The URL of your server's icon image. |
+| `{timestamp}` | Current time (in Discord formatting). |
+
+### <Icon icon="gear" /> View Configuration
+
+Check your current welcomer setup.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet config
+  ```
+  ```bash Example
+  ,greet config
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset Configuration
+
+Wipe your welcomer settings clean.
+
+<CodeGroup>
+  ```bash Syntax
+  ,greet reset
+  ```
+  ```bash Example
+  ,greet reset
+  ```
+</CodeGroup>

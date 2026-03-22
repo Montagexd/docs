@@ -1,0 +1,60 @@
+---
+title: "Autorole"
+description: "Automatically assign roles to new members and bots as they join your server."
+icon: "user-tag"
+---
+
+The Autorole module ensures that every new member or bot that joins your server is instantly assigned a designated role—no manual work required. This is one of the most essential tools for keeping your server organized from the very first second a user joins.
+
+
+## Human Autoroles
+
+Specify roles for human members.
+
+<CodeGroup>
+  ```bash Add Role
+  ,autorole humans add @Member
+  ```
+  ```bash Remove Role
+  ,autorole humans remove @Member
+  ```
+  ```bash Reset
+  ,autorole reset humans
+  ```
+</CodeGroup>
+
+## Bot Autoroles
+
+Specify roles for bot accounts.
+
+<CodeGroup>
+  ```bash Add Role
+  ,autorole bots add @Bots
+  ```
+  ```bash Remove Role
+  ,autorole bots remove @Bots
+  ```
+  ```bash Reset
+  ,autorole reset bots
+  ```
+</CodeGroup>
+
+## View Configuration
+
+Check which roles are currently set to be assigned automatically.
+
+<CodeGroup>
+  ```bash View All
+  ,autorole config
+  ```
+</CodeGroup>
+
+## Global Reset
+
+Clear all autorole settings for both humans and bots at once.
+
+<CodeGroup>
+  ```bash Reset All
+  ,autorole reset all
+  ```
+</CodeGroup>

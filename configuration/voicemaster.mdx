@@ -1,0 +1,102 @@
+---
+title: "Voice Master"
+description: "Allow your members to create and manage their own temporary voice channels."
+icon: "microphone"
+---
+
+The **Voice Master** system allows members to automatically create their own voice channels just by joining a primary setup channel. Users get full control over their created channel through an intuitive button interface, letting them lock, unlock, mute, hide, limit, and transfer the channel seamlessly.
+
+You can also set up a **Voice Master Duo** system which restricts the custom channels to exactly 2 users (perfect for private 1-on-1 calls).
+
+## Voice Master
+
+Set up and manage the standard temporary voice channel system.
+
+### <Icon icon="plus" /> Setup Voice Master
+
+Initialize the Voice Master category and join-to-create channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemaster setup
+  ```
+</CodeGroup>
+
+### <Icon icon="gamepad" /> Customize Buttons
+
+Select which buttons (like Lock, Hide, Ban, Mute, Limits) are available in the control interface.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemaster buttons
+  ```
+</CodeGroup>
+<Note>
+  This will open a drop-down menu where you can enable or disable specific control buttons!
+</Note>
+
+### <Icon icon="gear" /> View Configuration
+
+See your active primary setup alongside current temporary channels.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemaster config
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset System
+
+Disable and instantly remove the entire Voice Master system.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemaster reset
+  ```
+</CodeGroup>
+
+<br />
+
+## Voice Master Duo
+
+Setup the private duo (2-person limit) version of Voice Master.
+
+### <Icon icon="plus" /> Setup Duo
+
+Initialize the secondary Join-to-Create channel explicitly for duo channels.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemasterduo setup
+  ```
+</CodeGroup>
+
+### <Icon icon="gamepad" /> Duo Buttons
+
+Customize which control buttons are available for Duo channels.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemasterduo buttons
+  ```
+</CodeGroup>
+
+### <Icon icon="gear" /> View Duo Config
+
+View the current Duo setup.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemasterduo config
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset Duo
+
+Disable the Duo Voice Master module.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicemasterduo reset
+  ```
+</CodeGroup>

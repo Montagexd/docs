@@ -1,0 +1,57 @@
+---
+title: "Auto React"
+description: "Automatically react to specific trigger words with predefined emojis."
+icon: "face-smile"
+---
+
+The **Auto React** module allows Zynrax to automatically add reaction emojis to messages that contain specific trigger words. This is a great way to add fun and interactive elements to your community conversations!
+
+## Managing Reactions
+
+Setup and control your auto-reaction triggers.
+
+### <Icon icon="plus" /> Add Reaction
+
+Create a new trigger that will automatically react with the specified emojis.
+
+<CodeGroup>
+  ```bash Syntax
+  ,react add (trigger) (emojis)
+  ```
+  ```bash Example
+  ,react add hello 💖
+  ```
+</CodeGroup>
+<Note>
+  You can set up to **10 emojis** per trigger, and a maximum of **10 triggers** per server. Triggers must be a single word.
+</Note>
+
+### <Icon icon="trash" /> Remove Reaction
+
+Delete an existing trigger so the bot stops reacting to it.
+
+<CodeGroup>
+  ```bash Syntax
+  ,react remove (trigger)
+  ```
+</CodeGroup>
+
+### <Icon icon="list" /> View Triggers
+
+See all currently configured auto-reactions in your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,react list
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset Reactions
+
+Instantly delete all configured auto-reaction triggers.
+
+<CodeGroup>
+  ```bash Syntax
+  ,react reset
+  ```
+</CodeGroup>

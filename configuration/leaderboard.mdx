@@ -1,0 +1,377 @@
+---
+title: "Leaderboards"
+description: "Track and reward member activity with Voice, Message, and Invite leaderboards."
+icon: "star"
+---
+
+Zynrax keeps your community engaged with advanced leaderboard systems. Track who talks the most in text channels, who spends the most time in voice calls, and who brings the most new members to your server!
+
+<Note>
+  All leaderboard statistics are updated in **real-time**.
+</Note>
+
+## Message Leaderboard
+
+Track text activity and reward your most active chatters.
+
+### <Icon icon="toggle-on" /> Enable Message System
+
+Enable message tracking for the entire server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,msgleaderboard on
+  ```
+</CodeGroup>
+
+### <Icon icon="toggle-off" /> Disable Message System
+
+Disable message tracking for the entire server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,msgleaderboard off
+  ```
+</CodeGroup>
+
+### <Icon icon="chart-line" /> Message Statistics
+
+Check your own or another member's detailed message count.
+
+<CodeGroup>
+  ```bash Syntax
+  ,msgstats [member]
+  ```
+</CodeGroup>
+
+### <Icon icon="trophy" /> All-Time Leaderboard
+
+Display the top active members of all time in the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,leaderboard messages
+  ```
+</CodeGroup>
+
+### <Icon icon="calendar-day" /> Daily Leaderboard
+
+See who has been the most active in the last 24 hours.
+
+<CodeGroup>
+  ```bash Syntax
+  ,leaderboard dailymessages
+  ```
+</CodeGroup>
+
+### <Icon icon="calendar-week" /> Weekly Leaderboard
+
+Check the most active members of the current week.
+
+<CodeGroup>
+  ```bash Syntax
+  ,leaderboard weeklymessages
+  ```
+</CodeGroup>
+
+### <Icon icon="hand-middle-finger" /> Blacklist Channel
+
+Prevent messages sent in a specific channel from counting towards the leaderboard.
+
+<CodeGroup>
+  ```bash Syntax
+  ,blacklistchannel (channel)
+  ```
+</CodeGroup>
+
+### <Icon icon="folder-minus" /> Blacklist Category
+
+Prevent messages sent in an entire category from counting towards the leaderboard.
+
+<CodeGroup>
+  ```bash Syntax
+  ,blacklistcategory (category)
+  ```
+</CodeGroup>
+
+### <Icon icon="award" /> Message Rewards
+
+Set up roles that are automatically granted when a member reaches a message milestone.
+
+<CodeGroup>
+  ```bash Syntax
+  ,setmessagerole (messages) (role)
+  ```
+</CodeGroup>
+
+### <Icon icon="trash-can" /> Clear Server Messages
+
+Reset message statistics for every single member in the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clearmsgs
+  ```
+</CodeGroup>
+
+### <Icon icon="user-minus" /> Clear User Messages
+
+Reset message statistics for a specific member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clearmsgs (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset My Messages
+
+Instantly clear your own message statistics.
+
+<CodeGroup>
+  ```bash Syntax
+  ,resetmymessages
+  ```
+</CodeGroup>
+
+<br />
+
+## Voice Leaderboard
+
+Track time spent in voice channels and reward active talkers.
+
+### <Icon icon="toggle-on" /> Enable Voice System
+
+Enable voice time tracking for this guild.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicelb on
+  ```
+</CodeGroup>
+
+### <Icon icon="toggle-off" /> Disable Voice System
+
+Disable voice time tracking for this guild.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voicelb off
+  ```
+</CodeGroup>
+
+### <Icon icon="clock" /> Voice Stats
+
+Check a member's total, daily, and weekly time spent in voice calls.
+
+<CodeGroup>
+  ```bash Syntax
+  ,vcstats [member]
+  ```
+</CodeGroup>
+
+### <Icon icon="crown" /> All-Time Voice LB
+
+Display the server's top voice talkers of all time.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voiceleaderboard
+  ```
+</CodeGroup>
+
+### <Icon icon="sun" /> Daily Voice LB
+
+Check who spent the most time in voice today.
+
+<CodeGroup>
+  ```bash Syntax
+  ,dailyvoice
+  ```
+</CodeGroup>
+
+### <Icon icon="calendar-check" /> Weekly Voice LB
+
+Check the top voice active members of the week.
+
+<CodeGroup>
+  ```bash Syntax
+  ,weeklyvoice
+  ```
+</CodeGroup>
+
+### <Icon icon="plus" /> Add Voice Time
+
+Manually add voice calling time to a specific member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,addvctime (member) (time)
+  ```
+</CodeGroup>
+
+### <Icon icon="minus" /> Reduce Voice Time
+
+Manually remove voice calling time from a specific member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,reducevctime (member) (time)
+  ```
+</CodeGroup>
+
+### <Icon icon="trash" /> Clear Server Voice
+
+Reset the voice statistics for every member in the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clearvoice
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-left" /> Reset My Voice
+
+Instantly reset your own recorded voice time.
+
+<CodeGroup>
+  ```bash Syntax
+  ,resetmyvoice
+  ```
+</CodeGroup>
+
+<br />
+
+## Invite Leaderboard
+
+Track who is growing your server and reward successful inviters.
+
+### <Icon icon="toggle-on" /> Enable Invite System
+
+Enable the invite tracking and leaderboard system.
+
+<CodeGroup>
+  ```bash Syntax
+  ,invitelb on
+  ```
+</CodeGroup>
+
+### <Icon icon="toggle-off" /> Disable Invite System
+
+Disable the invite tracking and leaderboard system.
+
+<CodeGroup>
+  ```bash Syntax
+  ,invitelb off
+  ```
+</CodeGroup>
+
+### <Icon icon="user-plus" /> Invite Statistics
+
+Check a user's detailed invites (Joins, Leaves, Fakes, Rejoins).
+
+<CodeGroup>
+  ```bash Syntax
+  ,invites [member]
+  ```
+</CodeGroup>
+
+### <Icon icon="ranking-star" /> All-Time Invite LB
+
+Display the top inviters in your server based on total successful joins.
+
+<CodeGroup>
+  ```bash Syntax
+  ,inviteleaderboard
+  ```
+</CodeGroup>
+
+### <Icon icon="users-rays" /> Regular Invite LB
+
+Check the leaderboard based solely on regular join counts.
+
+<CodeGroup>
+  ```bash Syntax
+  ,inviteleaderboard regular
+  ```
+</CodeGroup>
+
+### <Icon icon="user-secret" /> Fake Invite LB
+
+View who has the most fake/alt-account invites.
+
+<CodeGroup>
+  ```bash Syntax
+  ,inviteleaderboard fake
+  ```
+</CodeGroup>
+
+### <Icon icon="magnifying-glass" /> Inviter Search
+
+Identify exactly who invited a specific member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,inviter (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="list-ul" /> Invited List
+
+View a paginated list of every user invited by a specific member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,invited (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="info" /> Invite Info
+
+Display the active invite codes owned by a member and their usage count.
+
+<CodeGroup>
+  ```bash Syntax
+  ,inviteinfo (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="medal" /> Reward Roles
+
+Automatically assign a role to members when they reach an invite milestone.
+
+<CodeGroup>
+  ```bash Syntax
+  ,setinviterole (invites) (role)
+  ```
+</CodeGroup>
+
+### <Icon icon="shield-halved" /> Alt Verification
+
+Set the account age required to count as a regular invite rather than a "Fake".
+
+<CodeGroup>
+  ```bash Syntax
+  ,setaltthreshold (days)
+  ```
+</CodeGroup>
+
+### <Icon icon="trash-arrow-up" /> Clear All Invites
+
+Reset invite statistics for everyone in the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clearinvites
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset My Invites
+
+Instantly clear your own personal invite statistics.
+
+<CodeGroup>
+  ```bash Syntax
+  ,resetmyinvites
+  ```
+</CodeGroup>

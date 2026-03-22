@@ -10,70 +10,125 @@ Zynrax provides a comprehensive suite of moderation commands designed for speed 
 
 Essential commands for daily server discipline.
 
-<AccordionGroup>
-  <Accordion title="Ban & Unban" icon="gavel">
-    Remove members permanently or restore their access.
-    <CodeGroup>
-      ```bash Syntax
-      ,ban (member) [reason]
-      ,unban (member) [reason]
-      ```
-      ```bash Example
-      ,ban @Montage Trolling
-      ,unban 371434681784205312 Appeal accepted
-      ```
-    </CodeGroup>
-    <Note>
-      Use `,unbanall` to clear the entire server ban list at once.
-    </Note>
-  </Accordion>
+### <Icon icon="gavel" /> Ban User
 
-  <Accordion title="Kick" icon="user-minus">
-    Instantly remove a member from the server.
-    <CodeGroup>
-      ```bash Syntax
-      ,kick (member) [reason]
-      ```
-      ```bash Example
-      ,kick @Montage Spam
-      ```
-    </CodeGroup>
-  </Accordion>
+Remove a member permanently from the server.
 
-  <Accordion title="Mute (Timeout)" icon="comment-slash">
-    Temporarily restrict a user's ability to speak or interact using Discord's timeout system.
-    <CodeGroup>
-      ```bash Syntax
-      ,mute (member) (duration) [reason]
-      ,unmute (member)
-      ```
-      ```bash Example
-      ,mute @Montage 1h Spamming
-      ,unmute @Montage
-      ```
-    </CodeGroup>
-    <Info>
-      Durations can be `s` (seconds), `m` (minutes), `h` (hours), or `d` (days). Max duration is 28 days.
-    </Info>
-    <Note>
-       Use `,unmuteall` to lift all active timeouts in the server simultaneously.
-    </Note>
-  </Accordion>
+<CodeGroup>
+  ```bash Syntax
+  ,ban (member) [reason]
+  ```
+  ```bash Example
+  ,ban @Montage Trolling
+  ```
+</CodeGroup>
 
-  <Accordion title="Warnings" icon="triangle-exclamation">
-    Keep track of member violations. Zynrax automatically applies a **timeout** if a user reaches 4+ warnings.
-    <CodeGroup>
-      ```bash Syntax
-      ,warn (member) [reason]
-      ,clearwarns (member)
-      ```
-      ```bash Example
-      ,warn @Montage Bad language
-      ,clearwarns @Montage
-      ```
-    </CodeGroup>
-  </Accordion>
-</AccordionGroup>
+### <Icon icon="unlock-keyhole" /> Unban User
+
+Restore a member's access to the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unban (member) [reason]
+  ```
+  ```bash Example
+  ,unban 371434681784205312 Appeal accepted
+  ```
+</CodeGroup>
+
+### <Icon icon="users-slash" /> Unban All
+
+Clear the entire server ban list at once.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unbanall
+  ```
+  ```bash Example
+  ,unbanall
+  ```
+</CodeGroup>
+
+### <Icon icon="user-minus" /> Kick
+
+Instantly remove a member from the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,kick (member) [reason]
+  ```
+  ```bash Example
+  ,kick @Montage Spam
+  ```
+</CodeGroup>
+
+### <Icon icon="comment-slash" /> Mute (Timeout)
+
+Temporarily restrict a user's ability to speak or interact using Discord's timeout system.
+
+<CodeGroup>
+  ```bash Syntax
+  ,mute (member) (duration) [reason]
+  ```
+  ```bash Example
+  ,mute @Montage 1h Spamming
+  ```
+</CodeGroup>
+<Info>
+  Durations can be `s` (seconds), `m` (minutes), `h` (hours), or `d` (days). Max duration is 28 days.
+</Info>
+
+### <Icon icon="comment" /> Unmute
+
+Remove a timeout from a member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unmute (member)
+  ```
+  ```bash Example
+  ,unmute @Montage
+  ```
+</CodeGroup>
+
+### <Icon icon="comments" /> Unmute All
+
+Lift all active timeouts in the server simultaneously.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unmuteall
+  ```
+  ```bash Example
+  ,unmuteall
+  ```
+</CodeGroup>
+
+### <Icon icon="triangle-exclamation" /> Warn User
+
+Keep track of member violations. Zynrax automatically applies a **timeout** if a user reaches 4+ warnings.
+
+<CodeGroup>
+  ```bash Syntax
+  ,warn (member) [reason]
+  ```
+  ```bash Example
+  ,warn @Montage Bad language
+  ```
+</CodeGroup>
+
+### <Icon icon="eraser" /> Clear Warnings
+
+Remove all warnings from a specific member.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clearwarns (member)
+  ```
+  ```bash Example
+  ,clearwarns @Montage
+  ```
+</CodeGroup>
 
 ## Message Management
 
@@ -84,7 +139,7 @@ Tools for cleaning chat clutter and auditing deleted content.
 Delete large amounts of messages (up to 999) with specialized filters.
 
 <AccordionGroup>
-  <Accordion title="Basic Purge" icon="broom">
+  <Accordion defaultOpen title="Basic Purge" icon="broom">
     <CodeGroup>
       ```bash Syntax
       ,purge (amount)
@@ -95,7 +150,7 @@ Delete large amounts of messages (up to 999) with specialized filters.
     </CodeGroup>
   </Accordion>
 
-  <Accordion title="User Purge" icon="user-gear">
+  <Accordion defaultOpen title="User Purge" icon="user-gear">
     <CodeGroup>
       ```bash Syntax
       ,purge user @user [amount]
@@ -106,15 +161,15 @@ Delete large amounts of messages (up to 999) with specialized filters.
     </CodeGroup>
   </Accordion>
 
-  <Accordion title="Advanced Filters" icon="filter">
+  <Accordion defaultOpen title="Advanced Filters" icon="filter">
     Deep clean specific types of content:
-    - `,purge bots`: Deletes messages sent by bots.
-    - `,purge images`: Deletes messages containing images.
-    - `,purge embeds`: Deletes messages with rich embeds.
-    - `,purge files`: Deletes messages with any uploaded file.
-    - `,purge emoji`: Deletes messages containing custom emojis.
-    - `,purge contains [text]`: Deletes messages containing specific keywords.
-    - `,purge reactions [amount]`: Removes all reactions from recent messages.
+    - **bots**: Messages sent by bots.
+    - **images**: Messages containing images or attachments.
+    - **embeds**: Messages with rich embeds.
+    - **files**: Messages with any uploaded file.
+    - **emoji**: Messages containing custom emojis.
+    - **contains [text]**: Messages containing specific keywords.
+    - **reactions**: Removes all reactions from recent messages.
     
     <CodeGroup>
       ```bash Syntax
@@ -124,6 +179,7 @@ Delete large amounts of messages (up to 999) with specialized filters.
       ,purge bots 20
       ,purge images 50
       ,purge contains scam
+      ,purge reactions 10
       ```
     </CodeGroup>
   </Accordion>
@@ -137,6 +193,9 @@ View content that was recently removed from the channel.
   ```bash Syntax
   ,snipe
   ```
+  ```bash Example
+  ,snipe
+  ```
 </CodeGroup>
 
 <Info>
@@ -147,38 +206,90 @@ View content that was recently removed from the channel.
 
 Management tools for channel visibility and structure.
 
-<AccordionGroup>
-  <Accordion title="Privacy & Chat Control" icon="lock">
-    Disable or enable sending messages and visibility in the current channel.
-    <CodeGroup>
-      ```bash Syntax
-      ,lock
-      ,unlock
-      ,hide
-      ,unhide
-      ```
-    </CodeGroup>
-  </Accordion>
+### <Icon icon="lock" /> Lock Channel
 
-  <Accordion title="Slowmode" icon="clock">
-    Limit how often users can send messages.
+Disable sending messages for @everyone in the current channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,lock
+  ```
+  ```bash Example
+  ,lock
+  ```
+</CodeGroup>
+
+### <Icon icon="unlock" /> Unlock Channel
+
+Enable sending messages for @everyone in the current channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unlock
+  ```
+  ```bash Example
+  ,unlock
+  ```
+</CodeGroup>
+
+### <Icon icon="eye-slash" /> Hide Channel
+
+Make the current channel invisible to @everyone.
+
+<CodeGroup>
+  ```bash Syntax
+  ,hide
+  ```
+  ```bash Example
+  ,hide
+  ```
+</CodeGroup>
+
+### <Icon icon="eye" /> Unhide Channel
+
+Make the current channel visible to @everyone again.
+
+<CodeGroup>
+  ```bash Syntax
+  ,unhide
+  ```
+  ```bash Example
+  ,unhide
+  ```
+</CodeGroup>
+
+### <Icon icon="clock" /> Slowmode
+
+Limit how often users can send messages.
+
+<CodeGroup>
+  ```bash Syntax
+  ,slowmode (seconds)
+  ```
+  ```bash Example
+  ,slowmode 5
+  ```
+</CodeGroup>
+<Note>
+  Use `,unslowmode` to quickly remove any active slowmode.
+</Note>
+
+<AccordionGroup>
+  <Accordion defaultOpen title="Bulk Channel Actions" icon="layer-group">
+    Apply permissions across the entire server instantly:
+    - **lockall**: Disables `send_messages` for @everyone in every channel.
+    - **unlockall**: Re-enables `send_messages` for @everyone in every channel.
+    - **hideall**: Disables `view_channel` for @everyone in every channel.
+    - **unhideall**: Re-enables `view_channel` for @everyone in every channel.
+
     <CodeGroup>
       ```bash Syntax
-      ,slowmode (seconds)
+      ,lockall
+      ,unlockall
+      ,hideall
+      ,unhideall
       ```
       ```bash Example
-      ,slowmode 5
-      ```
-    </CodeGroup>
-    <Note>
-      Use `,unslowmode` to quickly remove any active slowmode.
-    </Note>
-  </Accordion>
-
-  <Accordion title="Bulk Channel Actions" icon="layer-group">
-    Apply permissions across the entire server instantly.
-    <CodeGroup>
-      ```bash Syntax
       ,lockall
       ,unlockall
       ,hideall
@@ -189,47 +300,286 @@ Management tools for channel visibility and structure.
       Bulk channel actions require your role to be **strictly above** the bot's top role to prevent unauthorized mass changes.
     </Important>
   </Accordion>
-
-  <Accordion title="Channel Infrastructure" icon="explosion">
-    Quickly reset or duplicate channels.
-    <CodeGroup>
-      ```bash Syntax
-      ,nuke
-      ,clone (channel)
-      ```
-      ```bash Example
-      ,clone #general
-      ```
-    </CodeGroup>
-  </Accordion>
 </AccordionGroup>
+
+### <Icon icon="explosion" /> Nuke Channel
+
+Completely delete and clone the current channel, wiping its message history.
+
+<CodeGroup>
+  ```bash Syntax
+  ,nuke
+  ```
+  ```bash Example
+  ,nuke
+  ```
+</CodeGroup>
+
+### <Icon icon="copy" /> Clone Channel
+
+Duplicate a specific channel with its exact permissions and settings.
+
+<CodeGroup>
+  ```bash Syntax
+  ,clone (channel)
+  ```
+  ```bash Example
+  ,clone #general
+  ```
+</CodeGroup>
+
+## Voice Moderation
+
+Manage members and accessibility of voice channels throughout your server.
+
+### <Icon icon="user-minus" /> Voice Kick
+
+Remove a member from their current voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice kick (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="users-slash" /> Voice Kick All
+
+Disconnect every member from your current voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice kickall
+  ```
+</CodeGroup>
+
+### <Icon icon="microphone-slash" /> Voice Mute
+
+Mute a specific member in their voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice mute (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="microphone" /> Voice Unmute
+
+Restore a member's ability to speak in their voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice unmute (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="volume-xmark" /> Mute All
+
+Mute every member in your current voice channel simultaneously.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice muteall
+  ```
+</CodeGroup>
+
+### <Icon icon="volume-high" /> Unmute All
+
+Unmute every member in your current voice channel simultaneously.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice unmuteall
+  ```
+</CodeGroup>
+
+### <Icon icon="headphones" /> Voice Deafen
+
+Deafen a member so they cannot hear in the voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice deafen (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="ear-listen" /> Voice Undeafen
+
+Restore a member's ability to hear in the voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice undeafen (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="users-gear" /> Deafen All
+
+Deafen all members in your current voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice deafenall
+  ```
+</CodeGroup>
+
+### <Icon icon="users" /> Undeafen All
+
+Undeafen all members in your current voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice undeafenall
+  ```
+</CodeGroup>
+
+### <Icon icon="person-walking-arrow-right" /> Move Member
+
+Move a member to a different voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice move (member) (channel)
+  ```
+</CodeGroup>
+
+### <Icon icon="truck-fast" /> Move All
+
+Move every member in your current channel to another specified channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice moveall (channel)
+  ```
+</CodeGroup>
+
+### <Icon icon="magnet" /> Pull Member
+
+Instantly pull a member from any channel to your current voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice pull (member)
+  ```
+</CodeGroup>
+
+### <Icon icon="arrows-down-to-people" /> Pull All
+
+Pull every member from all voice channels in the server to yours.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice pullall (channel)
+  ```
+</CodeGroup>
+
+### <Icon icon="lock" /> Voice Lock
+
+Restrict access to your current channel so no more users can join.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice lock
+  ```
+</CodeGroup>
+
+### <Icon icon="unlock" /> Voice Unlock
+
+Remove the join restriction from your voice channel.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice unlock
+  ```
+</CodeGroup>
+
+### <Icon icon="eye-slash" /> Voice Private
+
+Make your current channel invisible and non-joinable for @everyone.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice private
+  ```
+</CodeGroup>
+
+### <Icon icon="eye" /> Voice Public
+
+Make your channel visible and joinable for the entire server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,voice unprivate
+  ```
+</CodeGroup>
+
+<br />
 
 ## Role Management
 
 Zynrax offers the most powerful role management system, allowing for both individual and bulk assignments.
 
-### Single Role Management
-Toggle, create, or modify roles with ease.
+### <Icon icon="user-tag" /> Assign or Remove Role
+
+Toggle a specific role for a member.
+
 <CodeGroup>
   ```bash Syntax
   ,role (member) (role)
-  ,role create (name)
-  ,role delete (role)
-  ,role rename (role) (name)
   ```
   ```bash Example
   ,role @Montage @VIP
-  ,role create Moderators
-  ,role rename @VIP Premium
   ```
 </CodeGroup>
 
+### <Icon icon="plus" /> Create Role
+
+Create a new role in your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,role create (name)
+  ```
+  ```bash Example
+  ,role create Moderators
+  ```
+</CodeGroup>
+
+### <Icon icon="trash" /> Delete Role
+
+Delete an existing role from your server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,role delete (role)
+  ```
+  ```bash Example
+  ,role delete @Moderators
+  ```
+</CodeGroup>
+
+### <Icon icon="pen" /> Rename Role
+
+Change the name of an existing role.
+
+<CodeGroup>
+  ```bash Syntax
+  ,role rename (role) (name)
+  ```
+  ```bash Example
+  ,role rename @VIP Premium
+  ```
+</CodeGroup>
 ### Bulk Role Operations
 Assign or remove roles from entire groups of users at once.
 
 <AccordionGroup>
-  <Accordion title="Bulk Add" icon="user-plus">
-    Give a role to every member fitting a specific criteria.
+  <Accordion defaultOpen title="Bulk Add" icon="user-plus">
+    Assign a role to large groups of users simultaneously:
+    - **role all**: Gives the role to every single member.
+    - **role humans**: Gives the role only to human accounts.
+    - **role bots**: Gives the role to all bot accounts.
+    - **role unverified**: Gives the role to members who do not have an avatar.
+
     <CodeGroup>
       ```bash Syntax
       ,role all (role)
@@ -239,13 +589,19 @@ Assign or remove roles from entire groups of users at once.
       ```
       ```bash Example
       ,role all @Member
-      ,role humans @Verified
+      ,role humans @Member
+      ,role bots @Bots
+      ,role unverified @New
       ```
     </CodeGroup>
   </Accordion>
 
-  <Accordion title="Bulk Remove" icon="user-minus">
-    Remove a role from every member fitting a specific criteria.
+  <Accordion defaultOpen title="Bulk Remove" icon="user-minus">
+    Strip a role from large groups of users simultaneously:
+    - **removerole all**: Removes the role from every single member.
+    - **removerole humans**: Removes the role only from human accounts.
+    - **removerole bots**: Removes the role from all bot accounts.
+
     <CodeGroup>
       ```bash Syntax
       ,removerole all (role)
@@ -254,48 +610,79 @@ Assign or remove roles from entire groups of users at once.
       ```
       ```bash Example
       ,removerole all @Muted
-      ,removerole bots @Verified
+      ,removerole humans @Muted
+      ,removerole bots @Muted
       ```
     </CodeGroup>
   </Accordion>
 </AccordionGroup>
 
-<Warning>
-  - Roles with **Dangerous Permissions** cannot be managed via bulk commands. These include:
-    `Administrator`, `Manage Server`, `Manage Roles`, `Manage Channels`, `Kick Members`, `Ban Members`, `Manage Webhooks`, and `Mention @everyone`.
-  - To use **Bulk Add/Remove** commands, your top role must be **higher than or equal to** the bot's top role.
-</Warning>
 
 ## Utility Moderation
 
 Formatting and asset management tools.
 
-<AccordionGroup>
-  <Accordion title="Asset Management" icon="icons">
-    Manage your server's emojis, stickers, and role visuals.
-    <CodeGroup>
-      ```bash Syntax
-      ,delemoji [emoji]
-      ,delsticker [reply]
-      ,roleicon (role) [icon]
-      ,enlarge (emoji)
-      ```
-      ```bash Example
-      ,roleicon @VIP https://link.to/icon.png
-      ,enlarge :smile:
-      ```
-    </CodeGroup>
-  </Accordion>
+### <Icon icon="square-minus" /> Delete Emoji
 
-  <Accordion title="Server Customization" icon="gears">
-    Manage nicknames and basic server identity.
-    <CodeGroup>
-      ```bash Syntax
-      ,nick (member) [new_nick]
-      ```
-      ```bash Example
-      ,nick @Montage Owner
-      ```
-    </CodeGroup>
-  </Accordion>
-</AccordionGroup>
+Remove a custom emoji from the server.
+
+<CodeGroup>
+  ```bash Syntax
+  ,delemoji [emoji]
+  ```
+  ```bash Example
+  ,delemoji :trash:
+  ```
+</CodeGroup>
+
+### <Icon icon="note-sticky" /> Delete Sticker
+
+Remove a sticker from the server by replying to it.
+
+<CodeGroup>
+  ```bash Syntax
+  ,delsticker [reply]
+  ```
+  ```bash Example
+  ,delsticker
+  ```
+</CodeGroup>
+
+### <Icon icon="image" /> Set Role Icon
+
+Apply an image as an icon for a specific role (requires server boosts).
+
+<CodeGroup>
+  ```bash Syntax
+  ,roleicon (role) [icon]
+  ```
+  ```bash Example
+  ,roleicon @VIP https://link.to/icon.png
+  ```
+</CodeGroup>
+
+### <Icon icon="magnifying-glass-plus" /> Enlarge Emoji
+
+Send a high-quality, enlarged version of any emoji.
+
+<CodeGroup>
+  ```bash Syntax
+  ,enlarge (emoji)
+  ```
+  ```bash Example
+  ,enlarge :smile:
+  ```
+</CodeGroup>
+
+### <Icon icon="gears" /> Server Customization
+
+Manage nicknames and basic server identity.
+
+<CodeGroup>
+  ```bash Syntax
+  ,nick (member) [new_nick]
+  ```
+  ```bash Example
+  ,nick @Montage Owner
+  ```
+</CodeGroup>

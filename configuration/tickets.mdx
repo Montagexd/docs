@@ -1,0 +1,169 @@
+---
+title: "Tickets"
+description: "Professional support system with transcripts and custom categories."
+icon: "ticket"
+---
+
+Zynrax's **Ticket System** provides a professional way to handle user inquiries, reports, and applications. With support for multiple categories, HTML transcripts, and dedicated staff roles, it is the perfect solution for servers of all sizes.
+
+## Core Setup
+
+Initialize the ticket system in your server.
+
+### <Icon icon="gears" /> Interactive Setup
+
+Configure the base settings including the ticket category and welcome messages.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket setup
+  ```
+</CodeGroup>
+<Note>
+  This interactive command will guide you through setting up Simple or Embed ticket messages.
+</Note>
+
+### <Icon icon="user-shield" /> Staff Role
+
+Define which role can view and manage all tickets.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket staff (role)
+  ```
+  ```bash Example
+  ,ticket staff @Moderator
+  ```
+</CodeGroup>
+
+### <Icon icon="file-invoice" /> Transcript Channel
+
+Set a channel where HTML transcripts will be sent after a ticket is closed.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket transcript (channel)
+  ```
+  ```bash Example
+  ,ticket transcript #logs
+  ```
+</CodeGroup>
+
+### <Icon icon="message" /> Send Ticket Panel
+
+Post the interactive button panel that users click to open tickets.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket panel (channel)
+  ```
+  ```bash Example
+  ,ticket panel #open-a-ticket
+  ```
+</CodeGroup>
+
+<br />
+
+## Multiple Categories
+
+You can create different types of tickets (e.g., Support, Reports, Appeals).
+
+### <Icon icon="folder-plus" /> Add Category
+
+Start the interactive setup to add a new ticket type (max 3 categories).
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket addcategory
+  ```
+</CodeGroup>
+
+### <Icon icon="list" /> View Categories
+
+List all configured ticket categories.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket categories
+  ```
+</CodeGroup>
+
+### <Icon icon="trash" /> Remove Category
+
+Delete an existing ticket category by its ID.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket removecategory (id)
+  ```
+  ```bash Example
+  ,ticket removecategory support
+  ```
+</CodeGroup>
+
+<br />
+
+## Member Management
+
+Add or remove users from a specific ticket.
+
+<CodeGroup>
+  ```bash Add User
+  ,ticket adduser (user)
+  ```
+  ```bash Remove User
+  ,ticket removeuser (user)
+  ```
+</CodeGroup>
+
+<br />
+
+## Lifecycle Actions
+
+Commands for active ticket channels.
+
+| Command | Description |
+| :--- | :--- |
+| `,ticket close` | Closes the ticket, generates a transcript, and restricts access. |
+| `,ticket delete` | Instantly deletes the ticket channel (use after closing). |
+| `,ticket transcript` | Manually generate an HTML transcript of the current chat. |
+
+<Tip>
+  **Pro-Tip**: Zynrax generates full **HTML Transcripts** that look just like Discord, complete with attachments and embeds, making audits a breeze!
+</Tip>
+
+<br />
+
+## Configuration Management
+
+View or modify your existing ticket systems.
+
+### <Icon icon="gear" /> View Config
+
+Shows the current ticket configuration, including staff role and active channels.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket config
+  ```
+</CodeGroup>
+
+### <Icon icon="pen-to-square" /> Edit Configuration
+
+Modify the ticket welcome message or panel message interactively.
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket edit
+  ```
+</CodeGroup>
+
+### <Icon icon="rotate-right" /> Reset Configuration
+
+Resets the entire ticket system configuration (prompts for confirmation).
+
+<CodeGroup>
+  ```bash Syntax
+  ,ticket reset
+  ```
+</CodeGroup>
